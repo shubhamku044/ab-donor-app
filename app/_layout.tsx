@@ -3,7 +3,7 @@ import {
 } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useFonts } from 'expo-font';
-import { SplashScreen, Stack } from 'expo-router';
+import { SplashScreen } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import WebView from 'react-native-webview';
 import SpaceMonoRegular from '../assets/fonts/SpaceMono-Regular.ttf';
@@ -26,7 +26,7 @@ function RootLayoutNav() {
         justifyContent: 'center',
       }}
     >
-      <Pressable
+      {/* <Pressable
         onPress={() => {
           setShowWebView(true);
         }}
@@ -52,7 +52,10 @@ function RootLayoutNav() {
             <WebView source={{ uri: 'https://donor.almsbucket.ml/user/portal' }} />
           </View>
         )
-      }
+      } */}
+      <View style={{ flex: 1, backgroundColor: 'yellow', width: '100%' }}>
+        <WebView source={{ uri: 'http://localhost:3000' }} />
+      </View>
     </SafeAreaView>
   );
 }
